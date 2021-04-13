@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import Covid from './components/Covid.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(){
+    super();
+    this.state = { 
+    data:{}
+    };
+  }
+    componentDidMount() {
+      console.log("DidMount");
+      var self = this;
+      axios.get("https://covid19.th-stat.com/api/open/today")
+      .then(function(response){
+      console.log(response.data);
+      self.setState({data:response.data});
+      
+      },
+      function(error){
+      console.log(error);
+      })
+      }
+  
+  render() {
+      return (
+          <div>
+            <Covid data = {this.state.data} />
+          </div>
+      )
+  }
 }
-
 export default App;
