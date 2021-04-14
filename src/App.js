@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import Covid from './components/Covid.js';
+import Background from './components/Background.js';
 
 class App extends React.Component {
 
@@ -30,6 +31,7 @@ class App extends React.Component {
       return (
           <div>
             <Covid data = {this.state.data} />
+            <Background/>
           </div>
       )
   }

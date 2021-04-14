@@ -1,0 +1,65 @@
+.root {
+  align-items: center;
+  /* padding-left: 100px; */
+  margin-left: 30.5% !important;
+  margin-top: 50px !important;
+  width: 630px;
+  height: 200px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: #ec5858;
+}
+.title2 {
+  width: 100%;
+  max-width: 500;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-left: 31%;
+  color: #132c33;
+}
+
+.title3 {
+  width: 100%;
+  /* max-width: 500; */
+  /* font-size: 30px; */
+  margin-left: 38%;
+  color: #132c33;
+}
+
+.title {
+  text-align: center !important;
+  color: white;
+}
+.title1 {
+  text-align: center !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px;
+  color: white;
+}
+.card1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #03c4a1;
+}
+.card2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #fd8c04;
+  margin-left: -280px;
+}
+.card3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #93abd3;
+  margin-left: -560px;
+}
+
+@media screen and (max-width: 1440px) {
+  .root {
+    margin-left: 35%;
+    margin-top: 250px;
+  }
+}
